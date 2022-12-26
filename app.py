@@ -7,8 +7,8 @@ import base64
 from night_images import illuminate
 
 
-st.markdown('<h1 style="color:white;">Image Enhancement Model</h1>', unsafe_allow_html=True)
-st.markdown('<h2 style="color:white;">This uses opencv to enhance the image given by extracting important features</h2>', unsafe_allow_html=True)
+st.markdown('<h1 style="color:yellow;">Image Enhancement Model</h1>', unsafe_allow_html=True)
+st.markdown('<h2 style="color:orange;">This uses opencv to enhance the image given by extracting important features</h2>', unsafe_allow_html=True)
 
 
 
