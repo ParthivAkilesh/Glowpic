@@ -93,14 +93,14 @@ class illuminate():
             im = Image.fromarray(ig)
             orig = im.copy()
 
-            tmin = 0.1   # minimum value for t to make J image
-            w = 15       # window size, which determine the corseness of prior images
-            alpha = 0.4  # threshold for transmission correction
-            omega = 0.75 # this is for dark channel prior
-            p = 0.1      # percentage to consider for atmosphere
-            eps = 1e-3   # for J image
+            tmin = 0.1  
+            w = 15       
+            alpha = 0.4  
+            omega = 0.75 
+            p = 0.1     
+            eps = 1e-3  
 
-            I = np.asarray(im, dtype=np.float64) # Convert the input to an array.
+            I = np.asarray(im, dtype=np.float64) 
             I = I[:, :, :3] / 255
 
             f_enhanced = self.dehaze(I, tmin, w, alpha, omega, p, eps)
@@ -110,9 +110,5 @@ class illuminate():
             
             return f_enhanced2
             
-        # cv2.imshow('original', orig)
-        # cv2.imshow('F_enhanced', f_enhanced)
-        # cv2.imshow('F_enhanced2', f_enhanced2)
-        # cv2.waitKey(0)
-        # cv2.destroyAllWindows()
+        
         
